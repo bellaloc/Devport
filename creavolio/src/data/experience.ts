@@ -3,72 +3,51 @@
 export const experience = {
   // --- Working history --- //
   working: [
-    // 1
     {
-      event: "Full-stack developer in Freelancing",
-      year: { from: "2024", to: "2025" },
+      event: "Full-Stack Developer – Freelance",
+      year: { from: "2024", to: "Present" },
       description:
-        "Currently working as a freelancer full-stack developer because give enough time to Phd, designing and implementing full-scale web applications from concept to deployment. Skilled in both front-end and back-end development, including RESTful API integration, database management.",
+        "Designing and developing responsive, scalable full-stack web applications for clients across various industries. Building APIs, integrating third-party services, and deploying solutions using modern cloud infrastructure. Projects emphasize clean architecture, performance, and user-first design.",
     },
-
-    // 2
     {
-      event: "Full-stack developer in Working Remotely",
+      event: "Software Engineer – Independent Projects",
       year: { from: "2022", to: "2024" },
       description:
-        "Currently working as a remote full-stack developer, designing and implementing full-scale web applications from concept to deployment. Skilled in both front-end and back-end development, including RESTful API integration, database management.",
+        "Built and deployed applications including a stock market prediction platform (Alucres) using Python, Flask, TensorFlow, and Qiskit. Integrated AI/ML models, conducted data analysis, and used Git, CI/CD pipelines, and cloud environments (Heroku, AWS).",
     },
-
-    // 3
     {
-      event: "Back-end developer in Freelaning",
+      event: "Backend Engineer – Contract",
       year: { from: "2020", to: "2021" },
       description:
-        "Built and maintained server-side logic, databases, and APIs using Node.js and other back-end technologies. Ensured data security, efficient database management, and robust application performance for various projects.",
+        "Developed backend logic, RESTful APIs, and database schemas using Node.js, Express, and MongoDB. Focused on security, scalability, and efficient data handling. Collaborated with front-end developers and product stakeholders on multiple freelance contracts.",
     },
-
-    // 4
     {
-      event: "Front-end developer in Freelaning",
+      event: "Frontend Developer – Freelance",
       year: { from: "2016", to: "2019" },
       description:
-        "Developed responsive and user-friendly interfaces using HTML, CSS, JavaScript, and front-end frameworks. Worked with clients to create visually appealing websites that meet their business needs and improve UX.",
+        "Created responsive, modern UI/UX experiences using HTML, CSS, JavaScript, and React. Worked with small business owners to design portfolio websites, landing pages, and ecommerce storefronts tailored to their brand and user base.",
     },
   ] as any[],
 
   // --- Education history --- //
   education: [
-    // 1
     {
-      event: "Get a PhD in MIT",
-      year: { from: "2024", to: "2025" },
+      event: "Bachelor of Science in Cloud Computing – Purdue Global",
+      year: { from: "2023", to: "Present" },
       description:
-        "I am now pursuing a PhD to deepen my knowledge in cutting-edge technologies and explore innovative solutions to complex problems. My research focuses on bridging the gap between theory and real-world applications, leveraging my practical experience to contribute to the advancement of the field.",
+        "Currently enrolled in a fast-track Cloud Computing program, focused on DevOps, network security, infrastructure as code (IaC), and AWS architecture. Hands-on labs in infrastructure monitoring, CI/CD, and virtualization.",
     },
-
-    // 2
     {
-      event: "Master Degree in MIT",
-      year: { from: "2021", to: "2024" },
+      event: "Certificate in Fullstack Software Engineering – UCLA Extension",
+      year: { from: "2023", to: "2023" },
       description:
-        "Completed advanced computer science courses focusing on web development, machine learning, deep learning, computer vision, image proccessing, and data analysis, enhancing my technical skills and understanding of modern development practices.",
+        "Completed an immersive software engineering program focused on JavaScript, Node.js, React, MongoDB, SQL, Git, Agile, and building full-stack MERN applications from concept to deployment.",
     },
-
-    // 3
     {
-      event: "Framework Courses in Web School",
-      year: { from: "2019", to: "2020" },
+      event: "Associate Degree in International Business – Santa Monica College",
+      year: { from: "2016", to: "2018" },
       description:
-        "Attended specialized courses covering popular web development frameworks such as React, Node.js, and Next.js, Laravel, .net core gaining practical knowledge in building responsive and dynamic web applications.",
-    },
-
-    // 4
-    {
-      event: "Computer Science in Harvard",
-      year: { from: "2014", to: "2018" },
-      description:
-        "Graduated with a solid foundation in software development, algorithms, data structures, databases, discrete math, and computer systems, with hands-on experience in various programming languages and technologies.",
+        "Gained foundational knowledge in international trade, finance, marketing, and economics. Developed strong communication and organizational skills to support global tech and eCommerce business applications.",
     },
   ] as any[],
 } as const;
-//

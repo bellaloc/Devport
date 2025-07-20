@@ -9,15 +9,14 @@ import {
   Rocket as performance,
   Server as system_design,
   WandSparkles as responsive_design,
-  Workflow as api_integaration,
+  Workflow as api_integration,
   ShieldCheck as security,
   MessageCircleQuestion as consulting,
   Megaphone as marketing,
 } from "lucide-react";
 
 /*
-  Available Services Icons
-  |
+  Available Services Icons:
   1  - analysis
   2  - business_intelligence
   3  - fix_bug
@@ -26,108 +25,84 @@ import {
   6  - performance
   7  - system_design
   8  - responsive_design
-  9  - api_integaration
+  9  - api_integration
   10 - security
   11 - consulting
   12 - marketing
 */
 
-// ==================[ Personal Information ]================== //
+// ==================[ Services Offered ]================== //
 export const services = [
-  // 1
   {
     service: "Responsive Design",
     description:
-      "I create responsive web designs that ensure your website looks and functions beautifully across all devices and screen sizes. Using modern techniques and frameworks, I tailor designs to provide an optimal user experience on secreens",
+      "I build fully responsive web interfaces that adapt seamlessly across all devices and screen sizes. Focused on modern aesthetics and accessibility for mobile-first experiences.",
     Icon: responsive_design,
   },
-
-  // 2
   {
-    service: "API Integaration",
+    service: "API Integration",
     description:
-      "I seamlessly integrate third-party APIs into your web applications to enhance functionality and streamline processes. Whether you need payment gateways, social media integration, or data from external services.",
-    Icon: api_integaration,
+      "I connect external services to your applications via RESTful or GraphQL APIs. Includes authentication, data binding, and robust error handling for smooth integrations.",
+    Icon: api_integration,
   },
-
-  // 3
   {
     service: "Database Management",
     description:
-      "I design, implement, and maintain robust databases to store and manage your data efficiently. From database schema design to performance tuning, I ensure your data is organized, secure, and easily accessible for your applications.",
+      "Designing, optimizing, and maintaining scalable databases using PostgreSQL, MySQL, or NoSQL. I ensure secure and efficient data access for your apps.",
     Icon: database_management,
   },
-
-  // 4
   {
-    service: "Fix Bugs",
+    service: "Bug Fixing",
     description:
-      "I troubleshoot and resolve issues in your web applications to ensure they run smoothly and reliably. Whether it's a minor glitch or a major functionality problem, I diagnose and fix bugs promptly to enhance performance.",
+      "I investigate and resolve front-end and back-end issues to restore app functionality and reliability. Fast turnarounds with clean, maintainable code.",
     Icon: fix_bug,
   },
-
-  // 5
   {
-    service: "optimize Performance",
+    service: "Performance Optimization",
     description:
-      "I analyze and optimize your website or application to improve load times, responsiveness, and overall performance. By employing best practices and leveraging tools and techniques, I ensure your site delivers a fast and user experience.",
+      "I audit and improve app speed, responsiveness, and load time using performance profiling and best practices. Includes image optimization, code splitting, and caching strategies.",
     Icon: performance,
   },
-
-  // 6
   {
-    service: "Marketing",
+    service: "Marketing-Ready Development",
     description:
-      "As a dedicated web developer with expertise in marketing, I specialize in creating visually stunning, high-converting websites designed to drive traffic and boost your online presence. By integrating cutting-edge technologies and optimizing for search engines, I ensure your website not only looks great but performs excellently to meet your business goals.",
+      "I create optimized websites designed to convert, using SEO best practices and modern layouts. Ideal for landing pages, product launches, and growing online presence.",
     Icon: marketing,
   },
-
-  // 7
   {
-    service: "Analysis",
+    service: "System Analysis",
     description:
-      "I conduct thorough analysis to understand your requirements and identify areas for improvement. By evaluating your current systems, processes, and goals, I provide actionable insights and recommendations to drive better outcomes.",
+      "I analyze existing codebases, app flow, and tech stacks to provide improvement strategies and planning for scaling or refactoring.",
     Icon: analysis,
   },
-
-  // 8
   {
     service: "Business Intelligence",
     description:
-      "I develop and implement business intelligence solutions to help you make data-driven decisions. Using advanced analytics and reporting tools, I transform your data into valuable insights, enabling you to understand trends.",
+      "I transform data into actionable insights using BI tools and dashboards. Great for internal tools or startups needing data-driven decisions.",
     Icon: business_intelligence,
   },
-
-  // 9
   {
-    service: "Project Help",
+    service: "Project Support",
     description:
-      "Whether you're starting a new project or need assistance with an existing one, I provide tailored support for web development projects. From troubleshooting code issues to guiding you through complex features, I'm here to help streamline your development process and ensure your project is successful.",
+      "From planning to launch, I offer hands-on help to get your project unstuck. Great for solo devs, teams, or clients needing extra dev power.",
     Icon: project_help,
   },
-
-  // 10
   {
-    service: "Security",
+    service: "Web App Security",
     description:
-      "I specialize in enhancing the security of your web applications by implementing best practices and cutting-edge technologies. From vulnerability assessments to securing user data and preventing attacks, I ensure your project is safeguarded against threats.",
+      "I implement secure coding practices, authentication flows, and common vulnerability protections (XSS, CSRF, etc.) for safe web apps.",
     Icon: security,
   },
-
-  // 11
   {
-    service: "Consulting",
+    service: "Tech Consulting",
     description:
-      "Need expert guidance? I offer web development consulting services to help you make informed decisions, optimize performance, and achieve your business goals. Whether you're deciding on a tech stack, improving user experience, or scaling your app, I'll provide actionable insights and strategies.",
+      "Offering 1:1 or team consulting on tech stacks, development strategy, and performance decisions. Ideal for MVPs, startups, or solo devs.",
     Icon: consulting,
   },
-
-  // 12
   {
-    service: "System Design",
+    service: "System Design & Architecture",
     description:
-      "I design scalable and efficient system architectures tailored to your specific needs. By focusing on modularity, performance, and maintainability, I create robust systems that support your business objectives and future growth.",
+      "I architect modular, scalable systems tailored for performance and future growth. Includes API design, service splitting, and data flow modeling.",
     Icon: system_design,
   },
-] as any[];
-//
+] as const;

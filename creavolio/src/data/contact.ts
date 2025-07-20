@@ -20,19 +20,19 @@ export const contact_info = [
   // 1
   {
     title: "Phone Number",
-    info: "+1234 4567 8926",
+    info: "+1(805)284-1445",
   },
 
   // 2
   {
     title: "Email",
-    info: "example@gmail.com",
+    info: "ChristaLococo@gmail.com",
   },
 
   // 3
   {
     title: "Location",
-    info: "New york, 1322",
+    info: "United States",
   },
 ] as const;
 //

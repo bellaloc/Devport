@@ -8,62 +8,97 @@ export const project_image_aspect: AspectType = "video";
 export const projects = [
   // 1
   {
-    title: "personal portfolio",
+    title: "Christa's Portfolio",
     description:
-      "A modern personal portfolio that effectively showcases a developer's experience, services, background, and projects, designed to increase opportunities for finding freelance or remote work",
-
+      "A responsive full-stack portfolio showcasing my professional background, technical skills, and featured projects. Built with modern design and dark/light mode toggle. Includes resume download, contact form, and animated transitions.",
     images: ["/images/projects/1-1.jpg"],
-    tags: ["portfolio", "front-end"],
-    tools_used: ["Next.js", "Typescript", "Shadcn", "Tailwind Css"],
-    duration: "1 month and 5 days",
+    tags: ["portfolio", "fullstack"],
+    tools_used: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
+    duration: "2 weeks",
     link: "https://creavolio.vercel.app",
   },
 
   // 2
   {
-    title: "ymmy grocery store",
+    title: "Alucres - AI Stock Predictor",
     description:
-      "Ymmy is a front-end grocery market web application designed to serve the local community by showcasing fresh food offerings, especially fruits and vegetables, with a focus on fast, local delivery. This project uses mock data to simulate real-world content and interactions, aiming to demonstrate my front-end development capabilities in building clean, responsive, and user-friendly interfaces.",
+      "An AI-driven stock analysis dashboard using TensorFlow, scikit-learn, and historical market data. Combines real-time charting with predictive analytics. Backend powered by Flask, deployed on Heroku.",
     images: ["/images/projects/2-1.jpg", "/images/projects/2-2.jpg"],
-    tags: ["eCommerce", "front-end", "back-end"],
-    tools_used: ["Next.js", "Typescript", "Shadcn", "Tailwind Css"],
-    duration: "1 month and 5 days",
-    link: "https://ymmy-grocery-store-ecommerce.vercel.app",
+    tags: ["fintech", "AI", "fullstack"],
+    tools_used: ["Python", "Flask", "TensorFlow", "React", "Chart.js"],
+    duration: "1.5 months",
+    link: "https://alucres-stocks.vercel.app",
   },
 
   // 3
   {
-    title: "ymmy grocery dashboard",
+    title: "Real Estate Market AI",
     description:
-      "A clean and efficient dashboard for managing products, orders, categories, and viewing insights through sales, order, and profit analysis, note: This project uses mock data to simulate real-world content and interactions, aiming to demonstrate my front-end development capabilities in building clean, responsive, and user-friendly interfaces.",
+      "A predictive analytics tool for real estate investors. It provides future price predictions based on market history using regression models. Includes maps, listings, and dynamic charts.",
     images: ["/images/projects/3-1.jpg", "/images/projects/3-2.jpg"],
-    tags: ["eCommerce", "front-end", "back-end", "analysis"],
-    tools_used: ["Next.js", "Typescript", "Shadcn", "Tailwind Css"],
-    duration: "1 month and 5 days",
-    link: "https://ymmy-grocery-store-ecommerce.vercel.app/admin",
+    tags: ["real estate", "data", "AI"],
+    tools_used: ["Next.js", "Leaflet.js", "Python", "Pandas", "scikit-learn"],
+    duration: "3 weeks",
+    link: "https://realestateai.vercel.app",
   },
 
   // 4
   {
-    title: "personal portfolio",
+    title: "Ymmy Grocery Store (Frontend)",
     description:
-      "A personal portfolio displaying skills, projects, and testimonials, with an option for hiring or collaboration.",
-    images: ["/images/projects/4-1.jpg"],
-    tags: ["portfolio", "front-end"],
-    tools_used: ["React", "CSS", "Javascript"],
-    duration: "3 days",
-    link: "https://portfolio-1-ecb5e.web.app/",
+      "A modern grocery market web app focused on UX/UI for local shopping and deliveries. Mock product data with filtering, responsive layout, and checkout flow.",
+    images: ["/images/projects/4-1.jpg", "/images/projects/4-2.jpg"],
+    tags: ["eCommerce", "frontend"],
+    tools_used: ["Next.js", "Typescript", "Tailwind CSS", "Shadcn/ui"],
+    duration: "1 month",
+    link: "https://ymmy-grocery-store-ecommerce.vercel.app",
   },
 
   // 5
   {
-    title: "logo",
-    description: "A minimal abstract logo on A shape",
+    title: "Ymmy Admin Dashboard",
+    description:
+      "An internal admin dashboard for product management, insights, and sales analytics. CRUD features with mock API simulation and data visualization.",
     images: ["/images/projects/5-1.jpg"],
-    tags: ["logo", "design"],
-    tools_used: ["figma"],
-    duration: "30min",
+    tags: ["dashboard", "backend", "analytics"],
+    tools_used: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
+    duration: "1 month",
+    link: "https://ymmy-grocery-store-ecommerce.vercel.app/admin",
+  },
+
+  // 6
+  {
+    title: "Women Empowerment Site",
+    description:
+      "Landing page prototype for an initiative supporting single mothers with remote work and entrepreneurship tools. Includes simple forms, storytelling layout, and CTA integrations.",
+    images: ["/images/projects/6-1.jpg"],
+    tags: ["nonprofit", "landing page", "UX"],
+    tools_used: ["React", "Tailwind CSS", "Framer Motion"],
+    duration: "5 days",
     link: "#",
   },
+
+  // 7
+  {
+    title: "Centsei Branding & Logo Design",
+    description:
+      "Visual identity and logo system for Centsei—combining financial wisdom with mentorship. Created using Figma with vector export and responsive logo guidelines.",
+    images: ["/images/projects/7-1.jpg"],
+    tags: ["branding", "logo", "design"],
+    tools_used: ["Figma", "Illustrator"],
+    duration: "1 day",
+    link: "#",
+  },
+
+  // 8
+  {
+    title: "Job Tracker App",
+    description:
+      "A fullstack web app to track job applications, resumes, interviews, and offer statuses. Uses Supabase for backend and Tailwind UI for design.",
+    images: ["/images/projects/8-1.jpg"],
+    tags: ["productivity", "fullstack"],
+    tools_used: ["Next.js", "Supabase", "Tailwind CSS", "Shadcn/ui"],
+    duration: "2 weeks",
+    link: "https://jobtracker.vercel.app",
+  },
 ];
-//

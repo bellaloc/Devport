@@ -1,256 +1,156 @@
 // ==================[ About Image ]================== //
 export const about_hero_sentences = [
-  "🚀 +245 projects done",
-  "💡 +15 years of experience",
-  "😊 +230 happy clients",
-  "✅ available for hire",
-  "🌍 working everyware",
+  "🚀 Built modern fullstack apps",
+  "💡 1+ year of hands-on dev experience",
+  "😊 Collaborated on real-world projects",
+  "✅ Available for hire & freelance",
+  "🌍 Open to remote & onsite work",
 ];
-//
 
 // ==================[ About Image ]================== //
-export const about_image = "/images/about.jpg";
-//
+export const about_image = "/images/about.jpg"; // Replace with your own if desired
 
 // ==================[ Are you Freelancer? ]================== //
-export const is_freelancer = true; // true if you are, otherwise false
-//
+export const is_freelancer = true;
 
 // ==================[ Are you available for hire? ]================== //
-export const is_available = true; // true if you are, otherwise false
-//
+export const is_available = true;
 
 // ==================[ Cv File ]================== //
 export const cv = {
-  source: "/cv.pdf", // if you don't have just leave source: ""
+  source: "/resume.pdf", // Place your real CV in the `public` folder and update filename if needed
   file_type: "pdf",
 };
-//
 
 // ==================[ What I Use or Tools ]================== //
-/*
-  Available Colors
-  |
-  1 - "blue"
-  2 - "green"
-  3 - "red"
-  4 - "yellow"
-  5 - "orange"
-  6 - "pink"
-  7 - "purple"
-  8 - "cyan"
-  9 - "teal"
-  10 - "lime"
-  11 - "fuchsia"
-  12 - "black"
-*/
-
 export const tools = [
-  // 1
   {
     name: "html",
     image: "/images/tools/html.png",
     color: "orange",
   },
-  // 2
   {
     name: "tailwind",
     image: "/images/tools/tailwind.png",
     color: "teal",
   },
-  // 3
   {
     name: "typescript",
     image: "/images/tools/ts.png",
     color: "blue",
   },
-  // 4
   {
     name: "react",
     image: "/images/tools/react.png",
     color: "blue",
   },
-  // 5
-  {
-    name: "angular",
-    image: "/images/tools/angular.png",
-    color: "red",
-  },
-  // 6
-  {
-    name: "nestjs",
-    image: "/images/tools/nestjs.png",
-    color: "red",
-  },
-  // 7
-  {
-    name: "graphql",
-    image: "/images/tools/graphql.png",
-    color: "pink",
-  },
-  // 8
   {
     name: "nextjs",
     image: "/images/tools/nextjs.png",
     color: "black",
   },
-  // 9
   {
-    name: "sql",
-    image: "/images/tools/sql.png",
+    name: "nodejs",
+    image: "/images/tools/nodejs.png",
+    color: "green",
+  },
+  {
+    name: "express",
+    image: "/images/tools/express.png",
+    color: "black",
+  },
+  {
+    name: "postgresql",
+    image: "/images/tools/postgres.png",
     color: "blue",
   },
-  // 10
-  {
-    name: "laravel",
-    image: "/images/tools/laravel.png",
-    color: "red",
-  },
-  // 11
-  {
-    name: "figma",
-    image: "/images/tools/figma.png",
-    color: "fuchsia",
-  },
-  // 12
-  {
-    name: "php",
-    image: "/images/tools/php.png",
-    color: "purple",
-  },
-  // 13
-  {
-    name: "wordpress",
-    image: "/images/tools/wordpress.png",
-    color: "cyan",
-  },
-  // 14
   {
     name: "docker",
     image: "/images/tools/docker.png",
     color: "blue",
   },
+  {
+    name: "figma",
+    image: "/images/tools/figma.png",
+    color: "fuchsia",
+  },
 ] as const;
-//
 
 // ==================[ Skills ]================== //
 export const skills = [
-  // 1
   {
-    skill: "Responsive Design",
-    percent: 95,
+    skill: "Fullstack Development",
+    percent: 85,
   },
-
-  // 2
   {
-    skill: "Coding",
+    skill: "UI/UX & Responsive Design",
     percent: 90,
   },
-
-  // 3
+  {
+    skill: "Clean, Maintainable Code",
+    percent: 87,
+  },
   {
     skill: "Problem Solving",
     percent: 88,
   },
-
-  // 4
   {
-    skill: "Project Management",
-    percent: 79,
-  },
-
-  // 5
-  {
-    skill: "Communication",
-    percent: 92,
+    skill: "Collaboration & Communication",
+    percent: 93,
   },
 ] as const;
-//
 
 // ==================[ Languages ]================== //
 export const languages = [
-  // 1
   {
     language: "English",
-    percent: 96,
+    percent: 100,
   },
-
-  // 2
-  {
-    language: "Arabic",
-    percent: 90,
-  },
-
-  // 3
-  {
-    language: "French",
-    percent: 55,
-  },
-
-  // 4
-  {
-    language: "German",
-    percent: 75,
-  },
+  
 ] as const;
-//
 
 // ==================[ What's Client says ]================== //
 export const clients = [
-  // 1
   {
-    name: "john mark",
+    name: "Jane Smith",
     rate: 5,
     comment:
-      "I've been using for over a 3 monthes now, The user interface is intuitive and the feature",
+      "Outstanding communication and fast delivery. Truly impressed by the quality of work.",
   },
-
-  // 2
   {
-    name: "Amelia Daniel",
-    rate: 4.5,
+    name: "David Lee",
+    rate: 4.8,
     comment:
-      "Your themes really amazing and inspiring me, I am goning to work with you again",
+      "Took initiative and delivered a fully responsive, modern application ahead of deadline. Highly recommend!",
   },
-
-  // 3
   {
-    name: "Ahmed Belal",
+    name: "Emily Tran",
     rate: 5,
     comment:
-      "You are really professional one and i am so happy of working with you, Thanks for solving my problems and I am goning to work with you again",
+      "You nailed the design-to-code handoff and exceeded expectations with performance optimizations. Can’t wait to collaborate again!",
   },
 ] as const;
-//
 
 // ==================[ Goals ]================== //
 export const goals = [
-  // 1
   {
-    goal: "Deliver High-Quality Web Solutions 💎",
+    goal: "Build Scalable Fullstack Applications ⚙️",
     description:
-      " Focus on creating websites and applications that are visually appealing, highly functional, and optimized for performance and SEO.",
+      "Design and develop robust, scalable apps using modern JavaScript frameworks and RESTful APIs.",
   },
-
-  // 2
   {
-    goal: "Enhance User Experience 😊",
+    goal: "Deliver Smooth, Responsive UI 🌟",
     description:
-      "Develop user-centric designs that provide seamless and intuitive navigation, ensuring a positive experience for all visitors.",
+      "Prioritize user experience through clean UI and fast performance across all devices.",
   },
-
-  // 3
   {
-    goal: "Take on Challenging Projects 💪🏽",
+    goal: "Grow as a Developer 📚",
     description:
-      "Seek out complex and innovative projects that challenge my skills and allow me to push the boundaries of what is possible in web development.",
+      "Continue learning best practices in frontend, backend, and DevOps to be an even stronger asset to any team.",
   },
-
-  // 4
   {
-    goal: "Contribute to the Developer Community ✅",
+    goal: "Build Impactful Products 🛠️",
     description:
-      "Share knowledge and resources through blogging, open-source contributions, and mentoring, to give back to the development community and support others in their growth.",
+      "Solve real-world problems and make meaningful contributions to the digital experience of users.",
   },
 ] as const;
-//

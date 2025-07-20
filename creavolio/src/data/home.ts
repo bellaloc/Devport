@@ -1,6 +1,6 @@
 // ==================[ Personal Data ]================== //
 export const personal_data = {
-  name: "Daniel Mark",
+  name: "Christa Lococo",
 
   image: "/images/hero.png",
 
