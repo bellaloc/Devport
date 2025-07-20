@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="pageHolder">
+      <nav>
+        <div data-section="overview">overview</div>
+        <div data-section="start">how to start</div>
+        <div data-section="data">change data</div>
+        <div data-section="change-theme">change theme</div>
+        <div data-section="images">adding images</div>
+        <div data-section="icons">adding more icons</div>
+        <div data-section="contact">enable contact form</div>
+        <div data-section="deployment">deploy it on Vercel</div>
+        <div data-section="help">help ?!</div>
+        <div data-section="advice">advice</div>
+      </nav>
+
+      <div class="containerHolder">
+        <div class="container">
+          <!--
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ overview ]======================================= -->
+          <section class="overview" data-title="overview">
+            <p>
+              First, you should know that you'll need to install some dependencies to be able to run the project.
+            </p>
+            <hr />
+            <ol>
+              <li>install node.js environment</li>
+              <li>install VSCode</li>
+              <li>
+                Open the portfolio project in VS Code to edit the code and preview it in your Chrome browser.
+              </li>
+              <li>
+                Replace the portfolio data with your personal information. It's recommended to have basic knowledge of JavaScript arrays and objects to edit the data more easily.
+              </li>
+              <li>Add appropriate images in place of the placeholder images.</li>
+              <li>Enable the contact form to allow users to send messages via email.</li>
+              <li>
+                Deploy the portfolio using a hosting provider <b>Vercel</b> to make it accessible online.
+              </li>
+              <li>Test the contact form and other functionalities to ensure everything works properly</li>
+            </ul>
+
+            <hr />
+            <h2>Folder Structure - files/folders that should modified</h2>
+            <ul>
+              <pre>
+├── public                          # [Folder] images and cv file
+│   ├── images                      # [Folder] Images
+│   │   ├── <b>projects                # [File] Projects image</b>
+│   │   ├── <b>tools                   # [File] Tools image</b>
+│   │   ├── <b>about.png               # [File] About image</b>
+│   │   └── <b>hero.png                # [File] Hero image</b>
+│   └── <b>cv.pdf                      # [File] CV PDF file</b>
+├── src                             # [Folder] Source Folder (main folder)
+│   ├── _actions                    # [Folder] Actions (specifically for form action)
+│   ├── app                         # [Folder] App router
+│   │   └── <b>favicon.ico             # [File] favicon image</b>
+│   ├── components                  # [Folder] Components
+│   ├── data                        # [Folder] Data (portfolio data) modify all files inside
+│   │   ├── <b>about.ts                # [File] About section data</b>
+│   │   ├── <b>app.ts                  # [File] App data (title, description, keywords)</b>
+│   │   ├── <b>contact.ts              # [File] Contact section data</b>
+│   │   ├── <b>experience.ts           # [File] Experience section data</b>
+│   │   ├── <b>global.ts               # [File] Global data (social links, theme configuration)</b>
+│   │   ├── <b>home.ts                 # [File] Home section data</b>
+│   │   ├── <b>projects.ts             # [File] Projects section data</b>
+│   │   └── <b>services.ts             # [File] Services section data</b>
+│   ├── context                     # [Folder] Context for global state management
+│   ├── libs                        # [Folder] Libs for utility functions
+│   ├── shared                      # [Folder] Shared types or colors
+│   └── styles.module.css           # [Folder] CSS styles module
+├── <b>.env                            # [File] Environment variables file</b>
+├── .eslintrc                       # [File] Eslintrc file
+├── .gitignore                      # [File] Git ignore file
+├── components.json                 # [File] Components description
+├── next-env.d.ts                   # [File] Environment variables types
+├── next.config.mjs                 # [File] Next.js configuration
+├── package-lock.json               # [File] NPM lock file
+├── package.json                    # [File] NPM lock file
+├── postcss.config.mjs              # [File] Postcss configuration
+└── tsconfig.ts                     # [File] Project readme
+              </pre>
+            </ul>
+          </section>
+          <!-- =======================================[ overview ]======================================= -->
+          <!--
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ start ]======================================= -->
+          <section class="start" data-title="start">
+            <ol>
+              <li>
+                install 
+                <a
+                  href="https://nodejs.org/en/download/package-manager"
+                  target="_blank"
+                  >node.js</a
+                >
+              </li>
+              <li>
+                install 
+                <a href="https://code.visualstudio.com/" target="_blank"
+                  >VSCode</a
+                >
+              </li>
+              <li>
+                open VSCode and open the portfolio project folder
+                <strong>Portfolio</strong> folder that contains of public, src,
+                .env, etc... files
+              </li>
+              <img src="./assets/images/folder.png" alt="" />
+              <li>
+                press <b>CTRL + J</b> to open the terminal and then select
+                output
+              </li>
+              <img src="./assets/images/terminal.png" alt="" />
+              <li>
+                write: <span class="command">node -v </span> and press <b>Enter</b> to show the version of
+                nodejs and sure you installed properly otherwise there is
+                a problem about installation
+              </li>
+              <img src="./assets/images/-v.png" alt="" />
+              <li>
+                write: <span class="command">npm i</span> and press <b>Enter</b> to install
+                node_modules folder
+              </li>
+              <img src="./assets/images/i.png" alt="" />
+              <li>
+                write: <span class="command">npm run dev</span> and press <b>Enter</b> to open the
+                project in your computer as a server
+              </li>
+              <img src="assets/images/dev.png" alt="" />
+              <li>
+                you will find <b>http://localhost:3000</b> in the output just
+                press <b>Ctrl + click</b> on <b>http://localhost:3000</b> to
+                open the link on browser
+              </li>
+              <img src="assets/images/server.png" alt="" />
+
+              <li>
+                now you can customize the portfolio and show your customization
+                on the web page without reload the page
+              </li>
+              <li>
+                you should know that before start: all editing will be on
+                <strong>data folder</strong> for
+                <b> portfolio data</b>
+                and <b>public folder for images and cv file</b> and
+                <b>.env file for sending mails</b>
+              </li>
+              <li>
+                try to learn from mockup images and data to understant how to
+                modify the portfolio to fit you and your needs
+              </li>
+            </ol>
+          </section>
+          <!-- =======================================[ start ]======================================= -->
+          <!--
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ data ]======================================= -->
+          <section class="data" data-title="how to change data">
+            <p>
+              if you want edit template easily just you need simple knowledage
+              of js variables,arrays and objects to edit the portfolio and it's
+              really simple and here the explanation:
+            </p>
+
+            <hr />
+            <h2>javascript variables</h2>
+
+            <ul>
+              <li>Variables are Containers for Storing Data</li>
+              <li>example <code>const name = "Daniel Mark"</code></li>
+              <li>there are data type and we will use:</li>
+              <li class="nested">
+                string for texts, example
+                <code>const about_me = "I Love Programming ...."</code>
+              </li>
+              <li class="nested">
+                number, example <code>const years_experience = 9</code>
+              </li>
+              <li class="nested">
+                boolean values for true or false, example
+                <code>const is_available = true</code>
+              </li>
+            </ul>
+            <hr />
+            <h2>javascript objects</h2>
+            <ul>
+              <li>
+                In real life, objects are things like: houses, cars, people,
+                animals, or any other subjects.
+              </li>
+              <li>
+                example
+                <code
+                  >const hero = { name: "Daniel Mark", job: "Web Developer",
+                  image: "/images/hero.png" }</code
+                >
+              </li>
+            </ul>
+            <hr />
+            <h2>javascript arrays</h2>
+            <ul>
+              <li>
+                An array is a special variable, which can hold more than one
+                value and wrapped by [ ] for example:
+                <code>["john", "daniel", "mark"]</code>
+              </li>
+
+              <li>
+                example:
+                <code
+                  >const skills = ["graphic design", "programming",
+                  "anaysis"]</code
+                >
+              </li>
+              <li>
+                and we can create array of objects:
+                <code
+                  >[ {skill: "a", value: 90}, {skill: "b", value: 78} ]</code
+                >
+              </li>
+            </ul>
+
+            <hr />
+            <h2>data folder</h2>
+
+            <ul>
+              <li>Inside the <b>/data</b> folder, you’ll find all the sections of the portfolio (e.g., about, projects, skills, etc.).</li>
+           
+              <li>
+                Each section contains variables and blocks of properties that define its content. To personalize the portfolio, update these values with your own information. For example, change the name, description, or image paths to match your data.
+              </li>
+              <li>The structure is consistent across all sections</li>
+              <li>
+                you can add or remove and edit , you have the full control
+              </li>
+              <li>
+                you will just replace some of texts and images paths to fit
+                yours needs
+              </li>
+              <li class="warn">
+                Do not change the names of constants or keys. Only modify the values to suit your needs.
+              </li>
+            </ul>
+          </section>
+          <!-- =======================================[ data ]======================================= -->
+          <!--
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ theme ]======================================= -->
+          <section class="change-theme" data-title="how to change theme">
+            <h2>1 - colors</h2>
+            <ul>
+              <li>You can edit the theme colors by modifying the CSS variables in <b>src/app/global.css</b></li>
+              <li>if you want to change theme color, copy colors code for example <b>#3b82f6</b> and paste it in css vars, for example<b>--main</b></li>
+            </ul>
+            <img src="./assets/images/theme-colors.png" alt="">
+            <h3 style="text-transform: lowercase;">--main-color & --gradient-to</h3>
+            <ol class="colors">
+                <li style="background-color: #3b82f6">blue: <strong>#3b82f6</strong></li>
+                <li style="background-color: #22c55e">green <strong>#22c55e</strong></li>
+                <li style="background-color: #ef4444">red <strong>#ef4444</strong></li>
+                <li style="background-color: #eab308">yellow <strong>#eab308</strong></li>
+                <li style="background-color: #f97316">orange <strong>#f97316</strong></li>
+                <li style="background-color: #ec4899">pink <strong>#ec4899</strong></li>
+                <li style="background-color: #a855f7">purple <strong>#a855f7</strong></li>
+                <li style="background-color: #06b6d4">cyan <strong>#06b6d4</strong></li>
+                <li style="background-color: #14b8a6">teal <strong>#14b8a6</strong></li>
+                <li style="background-color: #84cc16">lime <strong>#84cc16</strong></li>
+                <li style="background-color: #d946ef">fuchsia <strong>#d946ef</strong></li>
+                <li style="background-color: #000">black <strong>#000</strong></li>
+              </ol>
+
+              <br>
+              <br>
+
+            <h3 style="text-transform: lowercase;">--cursor-color</h3>
+            <ol class="colors">
+                <li style="background-color: #60a5fa">blue: <strong>#60a5fa</strong></li>
+                <li style="background-color: #4ade80">green <strong>#4ade80</strong></li>
+                <li style="background-color: #f87171">red <strong>#f87171</strong></li>
+                <li style="background-color: #facc15">yellow <strong>#facc15</strong></li>
+                <li style="background-color: #fb923c">orange <strong>#fb923c</strong></li>
+                <li style="background-color: #f472b6">pink <strong>#f472b6</strong></li>
+                <li style="background-color: #c084fc">purple <strong>#c084fc</strong></li>
+                <li style="background-color: #22d3ee">cyan <strong>#22d3ee</strong></li>
+                <li style="background-color: #2dd4bf">teal <strong>#2dd4bf</strong></li>
+                <li style="background-color: #a3e635">lime <strong>#a3e635</strong></li>
+                <li style="background-color: #e879f9">fuchsia <strong>#e879f9</strong></li>
+              </ol>
+
+              <br>
+              <br>
+
+               <h3 style="text-transform: lowercase;">--cursor-heavy-color</h3>
+              <ol class="colors">
+                <li style="background-color: #172554;">blue: <strong>#172554</strong></li>
+                <li style="background-color: #052e16;">green <strong>#052e16</strong></li>
+                <li style="background-color: #450a0a;">red <strong>#450a0a</strong></li>
+                <li style="background-color: #422006;">yellow <strong>#422006</strong></li>
+                <li style="background-color: #431407;">orange <strong>#431407</strong></li>
+                <li style="background-color: #500724;">pink <strong>#500724</strong></li>
+                <li style="background-color: #3b0764;">purple <strong>#3b0764</strong></li>
+                <li style="background-color: #083344;">cyan <strong>#083344</strong></li>
+                <li style="background-color: #042f2e;">teal <strong>#042f2e</strong></li>
+                <li style="background-color: #1a2e05;">lime <strong>#1a2e05</strong></li>
+                <li style="background-color: #4a044e;">fuchsia <strong>#4a044e</strong></li>
+                <li style="background-color: #000;">black <strong>#000</strong></li>
+              </ol>
+
+              <br>
+              <br>
+              
+              <hr>
+              <h3>2 - (dark, light)</h3>
+              <p> by modifying <b>is_dark_theme</b> in <b>src/data/global.ts</b></p>
+
+              <hr>
+              <h3>3 - animation behavior</h3>
+              <p> by modifying <b>is_animation_trigger_once</b> in <b>src/data/global.ts</b></p>
+
+              <hr>
+              <h3>4 - animation duration</h3>
+              <p> by modifying <b>--animation-duration</b> and <b>--duration</b> in <b>src/app/global.css</b></p>
+
+              <hr>
+              <h3>5 - landing page background</h3>
+              <p>by modifying <b>is_default_background</b> and <b>is_grid_spotlight</b> and <b>landing_background_image_path</b> in <b>src/data/global.ts</b></p>
+          </section>
+          <!-- =======================================[ theme ]======================================= -->
+          <!--
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ images ]======================================= -->
+          <section class="images" data-title="how to add images and cv file">
+            <ul>
+              <li>
+                open public folder and then images and there are projects,
+                tools, hero.png
+              </li>
+              <li><a href="https://www.svgrepo.com/" target="_blank">svg repo</a> for tool images, and you can download the tool image as a .png</li>
+              <li class="warn">
+                You don’t need to match the exact dimensions of the placeholder images.
+              </li>
+              <li>
+                When you want to add your image (or any image),
+                place it in the images folder. Then, in the data file,
+                update the corresponding property with the image source - for example: /images/hero.png.
+              </li>
+              <img src="./assets/images/image.png" alt="" />
+              <li>Replace the existing placeholder images with your own appropriate images.</li>
+
+              <li>replace these images by your images</li>
+              <li>
+                Delete the cv.pdf file from the public folder and replace it with your actual CV file.
+              </li>
+              <li>
+                Place your project images inside the images/projects folder. Then, in data/projects.ts, update the image paths accordingly.
+              </li>
+              <li class="nested"> example
+                <code>image: "/images/projects/1-1.jpg"</code>
+              </li>
+              <li>
+                Add your tool icons or images in the images/tools folder. Then, in data/projects, update the image source paths.
+              </li>
+
+                    <li class="nested"> example
+                <code>image: "/images/tools/html.png"</code>
+              </li>
+            </ul>
+          </section>
+
+          <!-- =======================================[ images ]======================================= -->
+          <!--
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ icons ]======================================= -->
+          <section class="icons" data-title="how to add more icons (if needed)">
+            <li>
+              there are predefined icons in data folder's files and easy to use
+            </li>
+            <li>
+              but if you want to get more icons click
+              <a href="https://lucide.dev/icons/" target="_blank">here</a> and
+              search for the needed icon, just see the name of icon and write it
+              by <span class="important">cammel case</span> like
+              <span class="important">Database, WandSparkles</span>
+            </li>
+            <li class="nested">
+              example <code>import {Database, WandSparkles} from "lucide-react";</code>
+            </li>
+              <li class="nested">
+              example <code>Icon: Database</code>
+            </li>
+            <hr>
+            or
+            <li class="nested">
+              example <code>import {Database as database} from "lucide-react";</code>
+            </li>
+              <li class="nested">
+              example <code>Icon: database</code>
+            </li>
+
+            <li>both methods are correct</li>
+          </section>
+
+          <!-- =======================================[ icons ]======================================= -->
+          <!--
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ contact ]======================================= -->
+          <section class="contact" data-title="how to send mails !">
+            <ul>
+              <li>open .env file</li>
+              <li>
+                create app password from google just go to google, and select
+                privacy section and search for app password and create one and
+                then copy it to
+                <span>add to APP_PASSWORD</span>
+                and the app password contains of 16 characters and don't forget
+                to remove spaces between password
+              </li>
+              <li>
+                add your actual email in
+                <span>EMAIL</span> and look at the example below
+              </li>
+              <img src="./assets/images/env.png" alt="" />
+              <li>you can test it to send to your self</li>
+            </ul>
+          </section>
+          <!-- =======================================[ contact ]======================================= -->
+
+          <!--
+          -
+          -
+          -
+          -
+          -->
+
+          <!-- =======================================[ deployment ]======================================= -->
+          <section class="deployment" data-title="how to deploy on Vercel">
+            <ol>
+              <li>
+                install
+                <a href="https://git-scm.com/downloads" target="_blank">Git</a>
+              </li>
+
+              <li>test this command in VSCode terminal:</li>
+
+              <ol>
+                <li>
+                  <code>git -v</code>
+                </li>
+                <img src="./assets/images/git-v.png" alt="">
+                <li>you should see the version of git to ensure proper installation</li>
+              </ol>
+
+              <li>
+                create a github account
+                <a href="https://github.com/" target="_blank">github</a>
+              </li>
+
+              <li>create new repository</li>
+              <img src="./assets/images/new.png" />
+
+              <li>
+                write <b>Repository name</b> and make it <b>Private</b> and then
+                create repository
+              </li>
+              <img src="./assets/images/git.png" alt="" />
+
+              <li>
+                open the terminal in VSCode and copy command lines line by line
+                to push the all portfolio files to your repository, so follow
+                these steps
+              </li>
+
+              <img src="./assets/images/git-steps.png" alt="" />
+
+              <ol>
+                <li><code>git init</code></li>
+                <li>
+                  <code>git add .</code>
+                  <span style="user-select: none">to add all files</span>
+                </li>
+                <li>
+                  <code>git commit -m "first commit"</code>
+                </li>
+                <li><code>git branch -M main</code></li>
+                <li>
+                  copy your own: 
+                  <code>git remote add origin https://github.com/********</code>
+                </li>
+                <img src="./assets/images/github-auth.png" alt="" />
+                <li>
+                  if you are a new user
+                  <code>git config --global user.email "(you email here)"</code>
+                </li>
+                <li><code>git push -u origin main</code></li>
+              </ol>
+
+              <li>
+                create vercel account
+                <a href="https://vercel.com/" target="_blank">Vercel</a>
+              </li>
+
+              <li>click on Add New... button and select project</li>
+              <img src="./assets/images/add-new-project.png" alt="" />
+
+              <li>continue with GitHub</li>
+
+              <li>import the portfolio project</li>
+              <img src="./assets/images/import-project.png" alt="" />
+
+              <li>
+                write project name and add environment variabels for contact
+                form
+              </li>
+
+              <img src="./assets/images/deploy-env.png" alt="" />
+
+              <li>Deploy & Enjoy!</li>
+              <img src="./assets/images/deploy.png" alt="" />
+
+              <li>optional: Enable analytics</li>
+              <ol>
+                <li>analytics tab</li>
+                <img src="./assets/images/analytics.png" alt="" />
+                <li>enable it</li>
+                <li>refresh the page</li>
+              </ol>
+
+              <li>
+                If you want to make updates later write these commands in VSCode
+                terminal
+              </li>
+              <ol>
+                <li><code>git add .</code></li>
+                <li><code>git commit -m "update somthing"</code></li>
+                <li><code>git push origin main</code></li>
+              </ol>
+            </ol>
+          </section>
+          <!-- =======================================[ deployment ]======================================= -->
+
+          <!--
+          -
+          -
+          -
+          -
+          -->
+
+          <!-- =======================================[ Help ]======================================= -->
+          <section class="help" data-title="help ?">
+            <p>
+              If you face any problem or have confusion about something or have
+              any sugesstion please contact me any time
+              <a href="https://themeforest.net/user/abx_themes" target="_blank"
+                >contact me</a
+              >
+            </p>
+          </section>
+          <!-- =======================================[ Help ]======================================= -->
+          <!--
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -
+          -->
+          <!-- =======================================[ Advice ]======================================= -->
+          <section class="advice" data-title="advice ">
+            <ul>
+              <li>
+                know more about VSCode by watching some videos, how to use, how
+                to add extenstions that make your life easier
+              </li>
+              <li>
+                don't change const variables to another name that exists in
+                <b>data folder's files</b> about.ts, projects.ts, etc..., just
+                edit the values
+              </li>
+              <li>focus when editing</li>
+              <li>
+                if you face any confusion about modification you can know more about
+                <b>javascript variables & datatypes, arrays ,objects</b>
+              </li>
+              <li>choose appropriate images to add</li>
+              <li class="nested">
+                hero's image must be .png, so if you have an jpg image you can
+                remove image's background by remove background online tools like
+              </li>
+              <li class="nested">
+                about's image maybe .png or jpg it's up to you
+              </li>
+              <li class="nested">
+                you can get used tools images from
+                <a href="https://www.svgrepo.com/" target="_blank">svg repo</a>
+                and that i used in portfolio
+              </li>
+
+              <li class="nested">add your project's screen shots images</li>
+              <li>know more about deployment by watching some videos <b>deploy to vercel</b></li>
+            </ul>
+          </section>
+          <!-- =======================================[ Advice ]======================================= -->
+        </div>
+      </div>
+    </div>
+    <div class="theme">
+      <div class="dark">dark</div>
+      <div class="light">light</div>
+    </div>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
