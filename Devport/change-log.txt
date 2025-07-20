@@ -1,0 +1,20 @@
+○ v1: 3/30/2025
+- initial release
+
+○ v2: 6/15/2025
+- Resolved all dependency-related issues
+
+○ v3: 7/3/2025
+- update the design
+- update to Next.js v15.3.4
+
+○ v3.1: 7/11/2025
+- add deployment to Vercel section in documentation
+- change portfolio section layout to 2 project columns
+
+
+○ v3.2: 7/17/2025
+- update the documentation.
+- update the portfolio card to improve UI/UX and change paragraph font size.
+- modify next.config.ts to prevent annoying deployment errors.
+
