@@ -18,7 +18,7 @@ export const is_available = true;
 
 // ==================[ Cv File ]================== //
 export const cv = {
-  source: "/resume.pdf", // Place your real CV in the `public` folder and update filename if needed
+  source: "/cv.pdf", // Place your real CV in the `public` folder and update filename if needed
   file_type: "pdf",
 };
 
