@@ -58,21 +58,21 @@ export const social_links = [
   // 2
   {
     Icon: github,
-    link: "https://github.com",
+    link: "https://github.com/bellaloc",
     color: "black",
   },
 
   // 3
   {
     Icon: linkedin,
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/in/christaLococo/",
     color: "blue",
   },
 
   // 4
   {
     Icon: x,
-    link: "https://x.com",
+    link: "https://x.com/ChristaLococo",
     color: "black",
   },
 
