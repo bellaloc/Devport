@@ -51,7 +51,7 @@ export const social_links = [
   // 1
   {
     Icon: dribble,
-    link: "https://dribble.com",
+    link: "http://christalococo.com/",
     color: "pink",
   },
 
@@ -79,28 +79,28 @@ export const social_links = [
   // 5
   {
     Icon: instagram,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/bellalococo",
     color: "fuchsia",
   },
 
   // 6
   {
     Icon: behance,
-    link: "https://behance.com",
+    link: "https://www.behance.net/christalococo",
     color: "blue",
   },
 
   // 7
   {
     Icon: upwork,
-    link: "https://upwork.com",
+    link: "https://www.upwork.com/freelancers/~01526fafd708d97aa6?mp_source=share",
     color: "green",
   },
 
   // 8
   {
     Icon: youtube,
-    link: "https://youtube.com",
+    link: "https://www.youtube.com/@christaLococo",
     color: "red",
   },
 ] as const;
