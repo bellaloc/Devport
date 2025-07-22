@@ -1,9 +1,8 @@
-import type { NextConfig } from "next";
+import withNetlify from "@netlify/next";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
-  },
 };
 
-export default nextConfig;
+export default withNetlify()(nextConfig);
