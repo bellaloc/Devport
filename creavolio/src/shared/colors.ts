@@ -16,7 +16,7 @@ export const COLOR_OPTIONS = [
 export type ColorType = (typeof COLOR_OPTIONS)[number];
 
 export const COLORS = {
-  blue: "#3b82f6",
+  blue: "#5287f3ff",
   teal: "#14b8a6",
   green: "#22c55e",
   cyan: "#06b6d4",
