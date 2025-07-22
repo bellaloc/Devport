@@ -1,9 +1,10 @@
-import withNetlify from "@netlify/next";
+import netlify from "@netlify/next";
 
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  ...netlify,
 };
 
-export default withNetlify()(nextConfig);
+export default nextConfig;

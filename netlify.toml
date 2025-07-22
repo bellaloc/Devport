@@ -3,5 +3,9 @@
   publish = ".next"
   functions = "netlify/functions"
 
+  [dev]
+  command = "npm run dev"
+  port = 3000
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
