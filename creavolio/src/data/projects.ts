@@ -15,7 +15,7 @@ export const projects = [
     tags: ["portfolio", "fullstack"],
     tools_used: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
     duration: "2 weeks",
-    link: "https://creavolio.vercel.app",
+    link: "https://christalococo.com",
   },
 
   // 2
