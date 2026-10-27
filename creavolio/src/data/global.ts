@@ -79,7 +79,7 @@ export const social_links = [
   // 5
   {
     Icon: instagram,
-    link: "https://www.instagram.com/bellalococo",
+    link: "https://www.instagram.com/bellaloc",
     color: "fuchsia",
   },
 

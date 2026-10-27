@@ -1,7 +1,7 @@
 // ==================[ About Image ]================== //
 export const about_hero_sentences = [
   "🚀 Built modern fullstack apps",
-  "💡 1+ year of hands-on dev experience",
+  "💡 Years of hands-on dev experience",
   "😊 Collaborated on real-world projects",
   "✅ Available for hire & freelance",
   "🌍 Open to remote & onsite work",

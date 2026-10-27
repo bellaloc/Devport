@@ -48,7 +48,7 @@ const About = () => {
         </AboutCard>
 
         <div className="col-span-12">
-          <AboutCard title="Resent Projects">
+          <AboutCard title="Recent Projects">
             <div className="space-y-8">
               <ProjectsTicker />
 
