@@ -15,7 +15,7 @@ export const projects = [
     tags: ["portfolio", "fullstack"],
     tools_used: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
     duration: "2 weeks",
-    link: "https://christalococo.com",
+    link: "https://bellaloc.com",
   },
 
   // 2
@@ -68,14 +68,14 @@ export const projects = [
 
   // 6
   {
-    title: "Women Empowerment Site",
+    title: "Los Angelust",
     description:
-      "Landing page prototype for an initiative supporting single mothers with remote work and entrepreneurship tools. Includes simple forms, storytelling layout, and CTA integrations.",
+      "An initiative supporting single mothers with remote work and entrepreneurship tools. Includes simple forms, storytelling layout, and CTA integrations.",
     images: ["/images/projects/6-1.jpg"],
     tags: ["nonprofit", "landing page", "UX"],
     tools_used: ["React", "Tailwind CSS", "Framer Motion"],
     duration: "5 days",
-    link: "#",
+    link: "https://losangelust.vercel.app/",
   },
 
   // 7
