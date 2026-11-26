@@ -38,13 +38,13 @@ const Contact = () => {
   const { isGetService, setIsGetService, serviceIdx } = useServiceContext();
 
   const sendEmailSchema = z.object({
-    email: z.string().email({
+    email: z.string().trim().max(254).email({
       message: "This email is invalid",
     }),
-    subject: z.string().min(isGetService ? 0 : 8, {
+    subject: z.string().trim().max(160).min(isGetService ? 0 : 8, {
       message: "subject at least has 8 characters",
     }),
-    message: z.string().min(12, {
+    message: z.string().trim().max(5000).min(12, {
       message: "Message at least has 12 characters",
     }),
   });
@@ -79,7 +79,7 @@ const Contact = () => {
         .then((res) => {
           setFormResponse(res);
         })
-        .catch((message) => setFormResponse({ error: true, message: message }));
+        .catch(() => setFormResponse({ error: true, message: "Unable to send your message. Please try again later." }));
     });
   };
 
@@ -116,9 +116,10 @@ const Contact = () => {
                             <Input
                               {...field}
                               placeholder="Your Email"
-                              type="text"
+                              aria-label="Your email"
+                              type="email"
                               disabled={isPending}
-                              autoComplete="on"
+                              autoComplete="email"
                             />
                           </FormControl>
                           <FormMessage />
@@ -142,6 +143,7 @@ const Contact = () => {
                             <Input
                               {...field}
                               placeholder="Your Subject"
+                              aria-label="Your subject"
                               type="text"
                               disabled={isPending || isGetService}
                               autoComplete="on"
@@ -167,6 +169,7 @@ const Contact = () => {
                             <Textarea
                               {...field}
                               placeholder="Your Message"
+                              aria-label="Your message"
                               disabled={isPending}
                               autoComplete="on"
                             />

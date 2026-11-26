@@ -1,1 +1,17 @@
 Devport/
+.DS_Store
+**/node_modules/
+**/.next/
+**/out/
+**/coverage/
+**/.vercel/
+**/.netlify/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+eval "$(ssh-agent -s)"
+eval "$(ssh-agent -s)".pub

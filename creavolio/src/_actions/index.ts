@@ -1,15 +1,14 @@
 "use server";
 import nodemailer from "nodemailer";
+import { z } from "zod";
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  service: "gmail",
-  auth: {
-    user: process.env.APP_EMAIL,
-    pass: process.env.APP_PASSWORD,
-  },
+const contactSchema = z.object({
+  senderEmail: z.string().trim().max(254).email(),
+  message: z.string().trim().min(12).max(5000),
+  subject: z.string().trim().min(8).max(160).refine(
+    (value) => !/[\r\n]/.test(value),
+    "Invalid subject"
+  ),
 });
 
 export const sendEmail = async (
@@ -17,17 +16,36 @@ export const sendEmail = async (
   message: string,
   subject: string
 ) => {
+  const parsed = contactSchema.safeParse({ senderEmail, message, subject });
+  if (!parsed.success) {
+    return { error: true, message: "Please check your email, subject and message." };
+  }
+
+  const user = process.env.APP_EMAIL;
+  const pass = process.env.APP_PASSWORD;
+  if (!user || !pass) {
+    return { error: true, message: "The contact form is temporarily unavailable." };
+  }
+
   try {
-    await transporter.sendMail({
-      from: `My website <${process.env.APP_EMAIL}>'`,
-      to: process.env.APP_EMAIL,
-      subject,
-      text: `Name: Client\nEmail: ${senderEmail}\nMessage: ${message}`,
-      replyTo: senderEmail,
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: { user, pass },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
     });
-    return { error: false, message: "Your Email Sent Successfully ! " };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } catch (e: any) {
-    return { error: true, message: e.message };
+    await transporter.sendMail({
+      from: { name: "Portfolio website", address: user },
+      to: user,
+      subject: parsed.data.subject,
+      text: `Email: ${parsed.data.senderEmail}\nMessage: ${parsed.data.message}`,
+      replyTo: parsed.data.senderEmail,
+    });
+    return { error: false, message: "Your message was sent successfully!" };
+  } catch {
+    return { error: true, message: "Unable to send your message. Please try again later." };
   }
 };
