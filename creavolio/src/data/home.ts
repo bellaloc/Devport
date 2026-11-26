@@ -2,7 +2,7 @@
 export const personal_data = {
   name: "Christa Lococo",
 
-  image: "https://avatars.githubusercontent.com/u/143298451?v=4",
+  image: "/images/hero.png",
 
   job: {
     part1: "Fullstack",
