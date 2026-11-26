@@ -10,7 +10,7 @@ export const projects = [
   {
     title: "Christa's Portfolio",
     description:
-      "A responsive full-stack portfolio showcasing my professional background, technical skills, and featured projects. Built with modern design and dark/light mode toggle. Includes resume download, contact form, and animated transitions.",
+      "A responsive full-stack portfolio showcasing my professional background, technical skills, and featured projects. Built with modern design and dark/light mode toggle. Includes a contact form and animated transitions.",
     images: ["/images/projects/1-1.jpg"],
     tags: ["portfolio", "fullstack"],
     tools_used: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/ui"],
@@ -22,19 +22,19 @@ export const projects = [
   {
     title: "Alucres - AI Stock Predictor",
     description:
-      "An AI-driven stock analysis dashboard using TensorFlow, scikit-learn, and historical market data. Combines real-time charting with predictive analytics. Backend powered by Flask, deployed on Heroku.",
+      "Stock analytics project currently under maintenance. Live demo unavailable while deployment and model evaluation are reviewed.",
     images: ["/images/projects/2-1.jpg"],
     tags: ["fintech", "AI", "fullstack"],
     tools_used: ["Python", "Flask", "TensorFlow", "React", "Chart.js"],
     duration: "1.5 months",
-    link: "https://alucres-stocks.vercel.app",
+    link: "",
   },
 
   // 3
   {
     title: "Real Estate Market AI",
     description:
-      "A predictive analytics tool for real estate investors. It provides future price predictions based on market history using regression models. Includes maps, listings, and dynamic charts.",
+      "Real estate analytics concept with a public landing page. Authentication and analytics functionality are under review.",
     images: ["/images/projects/3-1.jpg"],
     tags: ["real estate", "data", "AI"],
     tools_used: ["Next.js", "Leaflet.js", "Python", "Pandas", "scikit-learn"],
@@ -58,7 +58,7 @@ export const projects = [
   {
     title: "Ymmy Admin Dashboard",
     description:
-      "An internal admin dashboard for product management, insights, and sales analytics. CRUD features with mock API simulation and data visualization.",
+      "Demonstration admin dashboard with sample product and sales data. Administrative authorization and persistence are under review.",
     images: ["/images/projects/5-1.jpg"],
     tags: ["dashboard", "backend", "analytics"],
     tools_used: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
@@ -94,7 +94,7 @@ export const projects = [
   {
     title: "Job Tracker App",
     description:
-      "A fullstack web app to track job applications, resumes, interviews, and offer statuses. Uses Supabase for backend and Tailwind UI for design.",
+      "Job application tracking concept. The public demo currently displays summary headings; data persistence and tracking workflows are under review.",
     images: ["/images/projects/8-1.jpg"],
     tags: ["productivity", "fullstack"],
     tools_used: ["Next.js", "Supabase", "Tailwind CSS", "Shadcn/ui"],
