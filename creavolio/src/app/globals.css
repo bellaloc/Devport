@@ -219,3 +219,8 @@ html.dark .outlinedPureText {
   .pointer-decoration { display: none !important; }
   .motion-ticker { animation: none !important; transform: none !important; }
 }
+
+@media (hover: none), (pointer: coarse) {
+  .desktop-dock { display: none !important; }
+  .touch-dock { display: flex !important; }
+}

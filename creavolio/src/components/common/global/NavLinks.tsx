@@ -52,7 +52,7 @@ const NavLinks = () => {
           isShow ? "-translate-y-4" : "translate-y-full"
         )}
       >
-        <div className="hidden md:block">
+        <div className="desktop-dock hidden md:block">
         <Dock className="items-end pb-3 hover:backdrop-blur-0 hover:bg-[var(--bg-primary)] dark:hover:bg-[var(--bg-primary)] bg-[#bbb]/25 dark:bg-[#666]/25 backdrop-blur-lg rounded-full duration-300 border border-[var(--border)]">
           {sections.map((item, idx) => {
             const Icon = item.Icon;
@@ -74,7 +74,7 @@ const NavLinks = () => {
           })}
         </Dock>
         </div>
-        <div className="md:hidden flex items-center justify-center gap-1 min-[400px]:gap-2 p-2 rounded-full border border-[var(--border)] bg-[var(--bg-primary)] shadow-lg">
+        <div className="touch-dock md:hidden flex items-center justify-center gap-1 min-[400px]:gap-2 p-2 rounded-full border border-[var(--border)] bg-[var(--bg-primary)] shadow-lg">
           {sections.map(({ name, Icon }) => (
             <Link key={name} href={`#${name}`} aria-label={name.replace("-", " ")} className="size-11 flex-center shrink-0 rounded-full border border-[var(--border)] text-[var(--text-primary)] active:bg-[var(--bg-secondary)]">
               <Icon size={22} aria-hidden="true" />
