@@ -39,6 +39,7 @@ export type DockItemProps = {
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
+  ariaLabel?: string;
 };
 
 export type DockLabelProps = {
@@ -133,7 +134,7 @@ type DockItemChildProps = {
   isHovered: MotionValue<number>;
 };
 
-function DockItem({ children, className, onClick }: DockItemProps) {
+function DockItem({ children, className, onClick, ariaLabel }: DockItemProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { distance, magnification, mouseX, spring } = useDock();
@@ -167,7 +168,8 @@ function DockItem({ children, className, onClick }: DockItemProps) {
       )}
       tabIndex={0}
       role="button"
-      aria-haspopup="true"
+      aria-label={ariaLabel}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick?.(); } }}
       onClick={onClick}
     >
       {Children.map(children, (child) =>

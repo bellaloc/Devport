@@ -48,9 +48,11 @@
 }
 
 /* =============== Rules =============== */
-* {
-  cursor: none !important;
-}
+/* Retain native cursors for touch, keyboard and hybrid devices. */
+:focus-visible { outline: 2px solid var(--main); outline-offset: 4px; }
+html { scroll-padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px)); }
+img { max-width: 100%; }
+
 
 html {
   scroll-behavior: smooth;
@@ -73,7 +75,7 @@ main {
   position: relative;
   min-height: 100vh;
   background-color: var(--bg-secondary);
-  padding-bottom: 256px;
+  padding-bottom: clamp(5rem, 12vw, 16rem);
   z-index: 20;
 }
 
@@ -194,3 +196,26 @@ html.dark .outlinedPureText {
 }
 
 /* =============== Utilities =============== */
+
+#home { min-height: 100vh; min-height: 100svh; overflow: clip; }
+@media (max-width: 767px) {
+  #home { position: relative !important; }
+  main, section:not(#home) { min-height: auto; }
+  p { font-size: 1rem; }
+  #contact input, #contact textarea { font-size: 16px; }
+}
+@media (hover: none), (pointer: coarse) {
+  .pointer-decoration { display: none !important; }
+  .project-control { opacity: 1 !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .pointer-decoration { display: none !important; }
+  .motion-ticker { animation: none !important; transform: none !important; }
+}

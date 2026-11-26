@@ -10,7 +10,7 @@ import { landing_background_image_path } from "@/data/global";
 const { showAnimation } = styles;
 
 const hero_job_text_class =
-  "font-black sm:tracking-wider select-none 2xl:text-[10.5rem] 2xl:leading-[10.5rem] xl:text-[9rem] xl:leading-[9rem] md:text-[6.5rem] md:leading-[6.5rem] sm:text-[4.5rem] sm:leading-[4.5rem] text-[3.5rem] leading-[3.5rem] text-wrap";
+  "font-black sm:tracking-wider select-none 2xl:text-[10.5rem] 2xl:leading-[10.5rem] xl:text-[9rem] xl:leading-[9rem] md:text-[6.5rem] md:leading-[6.5rem] sm:text-[4.5rem] sm:leading-[4.5rem] text-[clamp(2rem,10vw,3.5rem)] leading-[1.05] text-wrap";
 
 const Home = () => {
   return (
@@ -25,15 +25,15 @@ const Home = () => {
 
       <GoDown />
 
-      <div className="absolute md:p-8 p-4 rad top-[50%] translate-y-[-50%] z-50">
+      <div className="absolute md:p-8 p-4 rad top-[50%] translate-y-[-50%] z-50 max-w-full">
         <div
-          className="uppercase space-y-8"
+          className="uppercase space-y-3 sm:space-y-8"
           style={{ wordBreak: "break-word" }}
         >
           <h1
             className={cn(
               showAnimation,
-              "font-[800] text-gradient 2xl:text-[6.5rem] select-none 2xl:leading-[5rem] xl:text-[4rem] xl:leading-[4rem] md:text-[3rem] md:leading-[3rem] text-[2.75rem] leading-[2.75rem] text-wrap"
+              "font-[800] text-gradient 2xl:text-[6.5rem] select-none 2xl:leading-[5rem] xl:text-[4rem] xl:leading-[4rem] md:text-[3rem] md:leading-[3rem] text-[clamp(1.65rem,7vw,2.75rem)] leading-[1.1] text-wrap"
             )}
           >
             {personal_data.name}

@@ -10,8 +10,8 @@ const TickerPart = ({ size }: { size: "sm" | "lg" }) => {
         "flex text-[var(--text-primary-inverse)]",
         size === "sm"
           ? "font-[500] text-lg gap-8"
-          : "font-semibold text-5xl gap-16",
-        size === "sm" ? animateSmallScroll : animateScroll
+          : "font-semibold text-xl sm:text-3xl md:text-5xl gap-8 md:gap-16",
+        "motion-ticker", size === "sm" ? animateSmallScroll : animateScroll
       )}
       style={{ animationDuration: `${about_hero_sentences.length * 8}s` }}
     >
@@ -28,7 +28,7 @@ const InfiniteTicker = ({ size = "lg" }: { size?: "sm" | "lg" }) => {
   return (
     <div
       className={cn(
-        size === "sm" ? "gap-8 py-2" : "gap-16 py-8",
+        size === "sm" ? "gap-8 py-2" : "gap-8 md:gap-16 py-3 md:py-8",
         "w-full relative bg-[var(--bg-primary-inverse)] overflow-hidden flex"
       )}
     >

@@ -11,6 +11,7 @@ const HeroImage = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!window.matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)").matches) return;
     const { clientX, clientY, currentTarget } = e;
     const { width, height, left, top } = currentTarget.getBoundingClientRect();
 
@@ -29,9 +30,9 @@ const HeroImage = () => {
         src={personal_data.image}
         alt={personal_data.name}
         fill
-        sizes="100vw"
+        sizes="(max-width: 767px) 100vw, 60vw"
         className={cn(
-          "object-cover !w-auto !h-[112%] -z-10 duration-1000",
+          "object-contain object-right-bottom !w-auto !max-w-full !h-[78%] md:!h-[112%] -z-10 duration-1000",
           showAnimation
         )}
         style={{
@@ -41,7 +42,7 @@ const HeroImage = () => {
           bottom: "-32px",
           transform: `translate(${position.x}px, ${position.y}px)`,
         }}
-        quality={100}
+        quality={80}
         priority
       />
 
