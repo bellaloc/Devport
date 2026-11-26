@@ -46,7 +46,7 @@ export const projects = [
   {
     title: "Ymmy Grocery Store (Frontend)",
     description:
-      "A modern grocery market web app focused on UX/UI for local shopping and deliveries. Mock product data with filtering, responsive layout, and checkout flow.",
+      "A grocery storefront prototype adapted from a licensed ThemeForest template, with mock product data, filtering, responsive layout, and a demonstration checkout flow.",
     images: ["/images/projects/4-1.jpg", "/images/projects/4-2.jpg"],
     tags: ["eCommerce", "frontend"],
     tools_used: ["Next.js", "Typescript", "Tailwind CSS", "Shadcn/ui"],
@@ -58,9 +58,9 @@ export const projects = [
   {
     title: "Ymmy Admin Dashboard",
     description:
-      "An internal admin dashboard for product management, insights, and sales analytics. CRUD features with mock API simulation and data visualization.",
+      "An admin dashboard prototype using the licensed Ymmy template, with simulated product management and sales analytics.",
     images: ["/images/projects/5-1.jpg"],
-    tags: ["dashboard", "backend", "analytics"],
+    tags: ["dashboard", "frontend", "analytics"],
     tools_used: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
     duration: "1 month",
     link: "https://ymmy-grocery-store-ecommerce.vercel.app/admin",
