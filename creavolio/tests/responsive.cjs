@@ -1,4 +1,7 @@
+// CommonJS resolves the isolated CI dependency via NODE_PATH.
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { chromium } = require("playwright");
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const assert = require("node:assert/strict");
 
 const sizes = [
