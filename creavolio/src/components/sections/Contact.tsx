@@ -100,8 +100,8 @@ const Contact = () => {
           ref={contactFormRef}
         >
           <Spotlight size={1000} />
-          <div className="relative grid lg:grid-cols-12 lg:p-16 p-8 gap-16 size-full rad bg-[var(--bg-primary)] dark:bg-[var(--bg-secondary)]">
-            <div className="lg:order-2 lg:col-span-7">
+          <div className="relative grid lg:grid-cols-12 lg:p-16 sm:p-8 p-4 gap-8 lg:gap-16 size-full rad bg-[var(--bg-primary)] dark:bg-[var(--bg-secondary)]">
+            <div className="lg:order-2 lg:col-span-7 min-w-0">
               <Form {...form}>
                 <form
                   className="space-y-8"
@@ -186,7 +186,7 @@ const Contact = () => {
                     message={formResponse?.message}
                   />
 
-                  <div className="w-60">
+                  <div className="w-full sm:w-60">
                     <Button
                       type="submit"
                       className="flex-center w-40 py-8 group !rounded-full"
@@ -214,7 +214,7 @@ const Contact = () => {
               </Form>
             </div>
 
-            <div className="grid gap-8 order-1 lg:grid-cols-1 md:grid-cols-2 lg:col-span-5">
+            <div className="grid gap-4 sm:gap-8 order-1 min-w-0 lg:grid-cols-1 md:grid-cols-2 lg:col-span-5">
               {contact_info.map((item, i) => (
                 <ContactInfo key={i} {...item} />
               ))}

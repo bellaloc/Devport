@@ -29,13 +29,13 @@ const ProjectFooter = ({
         isOut
           ? "bg-[var(--bg-primary)] border border-[var(--border)] border-t-transparent rounded-b-[var(--radius)]"
           : "absolute left-0 bottom-0 bg-black/15 backdrop-blur-sm w-full",
-        " p-8  space-y-8"
+        " p-4 sm:p-8 space-y-4 sm:space-y-8"
       )}
     >
       <div className="flex justify-between items-center gap-2">
         <div className="flex items-end gap-4">
           <CountTitle idx={idx} className="hidden sm:inline" />
-          <h1 className="text-2xl line-clamp-1">{title}</h1>
+          <h1 className="text-lg sm:text-2xl break-words">{title}</h1>
         </div>
         <ProjectLink link={link} />
       </div>
@@ -48,7 +48,7 @@ const Project = ({ title, images, tags, link, idx }: ProjectProps) => {
     triggerOnce: is_animation_trigger_once,
   });
 
-  const { setIsOpenProject, setProjectIdx, isOpenProject, projectIdx } =
+  const { setIsOpenProject, setProjectIdx, isOpenProject } =
     useProjectContext();
 
   const [isCanOpenProjectDialog, setIsCanOpenProjectDialog] = useState(true);
@@ -80,7 +80,7 @@ const Project = ({ title, images, tags, link, idx }: ProjectProps) => {
         )}
       >
         <ProjectImageSlider
-          projectIdx={projectIdx}
+          projectIdx={idx}
           images={images}
           title={title}
           openProject={openProjectDialog}

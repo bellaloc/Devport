@@ -24,6 +24,7 @@ export const CursorContextProvider = ({
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
+      if (!window.matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)").matches) return;
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
@@ -36,7 +37,7 @@ export const CursorContextProvider = ({
       <motion.div
         className={cn(
           customCursor,
-          "fixed top-0 left-0 bg-[var(--main)] pointer-events-none z-[99] size-10",
+          "pointer-decoration fixed top-0 left-0 bg-[var(--main)] pointer-events-none z-[99] size-10",
           "bg-gradient-to-br from-[var(--cursor-heavy-color)] dark:from-white via-[var(--cursor-color)] to-[var(--cursor-color)] dark:via-[var(--main)] dark:to-[var(--gradient-to)]"
         )}
         style={{

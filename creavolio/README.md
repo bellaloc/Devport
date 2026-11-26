@@ -19,3 +19,6 @@ Maintain featured projects in src/data/projects.ts. Verify demo URLs and impleme
 
 ## License and security
 Confirm the ThemeForest license permits public source distribution and the intended deployment. No third-party code is relicensed here. If an SSH private key was committed, revoke it immediately; removing a file does not purge historical copies.
+
+## Responsive and accessibility verification
+The original portraits and theme are preserved. Layout adapts using viewport size, touch/hover capabilities, reduced-motion preference and device safe areas. Review the preview at 320, 375, 390, 768, 1024 and 1440 CSS pixels, including landscape and keyboard-only navigation. Check both portraits, section navigation, project details, contact inputs and theme controls. Automated build checks are not a substitute for actual browser and device testing.

@@ -19,7 +19,7 @@ const AboutCard = ({
       )}
     >
       <Spotlight size={400} />
-      <div className="relative space-y-8 p-8 bg-[var(--bg-primary)] dark:bg-[var(--bg-secondary)] rad h-full">
+      <div className="relative space-y-4 sm:space-y-8 p-4 sm:p-8 bg-[var(--bg-primary)] dark:bg-[var(--bg-secondary)] rad h-full">
         <h1 className="animated-duration text-3xl font-semibold tracking-wide transition-transform">
           {title}
         </h1>

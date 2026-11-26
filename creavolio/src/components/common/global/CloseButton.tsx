@@ -17,11 +17,10 @@ const CloseButton = ({
         "animated-duration fixed right-4 group top-0 z-[42]",
         className
       )}
-      onClick={onClick}
     >
-      <Button>
-        <div className="bg-[var(--main)] rounded-full flex-center text-white p-4">
-          <X size={60} className="group-hover:rotate-90 duration-300" />
+      <Button type="button" aria-label="Close project details" onClick={onClick}>
+        <div className="bg-[var(--main)] rounded-full flex-center text-white p-2 sm:p-3">
+          <X size={28} className="group-hover:rotate-90 duration-300" />
         </div>
       </Button>
     </div>
