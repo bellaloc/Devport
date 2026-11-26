@@ -2,7 +2,6 @@
 import { useProjectContext } from "@/context/ProjectContext";
 import { useInView } from "react-intersection-observer";
 import { is_animation_trigger_once } from "@/data/global";
-import { useEffect, useState } from "react";
 import ProjectImageSlider from "./ProjectImageSlider";
 import { cn } from "@/lib/utils";
 import { project_image_aspect } from "@/data/projects";
@@ -48,24 +47,12 @@ const Project = ({ title, images, tags, link, idx }: ProjectProps) => {
     triggerOnce: is_animation_trigger_once,
   });
 
-  const { setIsOpenProject, setProjectIdx, isOpenProject } =
+  const { setIsOpenProject, setProjectIdx } =
     useProjectContext();
 
-  const [isCanOpenProjectDialog, setIsCanOpenProjectDialog] = useState(true);
-
-  useEffect(() => {
-    if (!isOpenProject) setIsCanOpenProjectDialog(false);
-    const time = setTimeout(() => {
-      setIsCanOpenProjectDialog(true);
-    }, 1500);
-    return () => clearTimeout(time);
-  }, [isOpenProject]);
-
   const openProjectDialog = () => {
-    if (isCanOpenProjectDialog) {
-      setIsOpenProject(true);
-      setProjectIdx(idx);
-    }
+    setProjectIdx(idx);
+    setIsOpenProject(true);
   };
 
   return (

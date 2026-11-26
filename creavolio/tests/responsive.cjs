@@ -32,8 +32,16 @@ async function check() {
         await page.getByRole("button", { name: /View details for/ }).first().click();
         const dialog = page.getByRole("dialog");
         await dialog.waitFor({ state: "visible" });
+        await page.waitForFunction(() => {
+          const el = document.querySelector('[role="dialog"]');
+          return el && !el.inert && el.getAttribute("aria-modal") === "true";
+        });
         assert(await dialog.evaluate(el => !el.inert && el.getAttribute("aria-modal") === "true"), "Project dialog should be active");
         await page.getByRole("button", { name: "Close project details" }).click();
+        await page.waitForFunction(() => document.querySelector('[role="dialog"]')?.inert === true);
+        await page.getByRole("button", { name: /View details for/ }).first().click();
+        await page.waitForFunction(() => document.querySelector('[role="dialog"]')?.getAttribute("aria-modal") === "true");
+        await page.keyboard.press("Escape");
         await page.waitForFunction(() => document.querySelector('[role="dialog"]')?.inert === true);
         const dimensions = await page.evaluate(() => ({ viewport: document.documentElement.clientWidth, content: document.documentElement.scrollWidth }));
         assert(dimensions.content <= dimensions.viewport + 2, "Unexpected horizontal document overflow");
