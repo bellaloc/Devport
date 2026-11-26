@@ -8,7 +8,7 @@ export const about_hero_sentences = [
 ];
 
 // ==================[ About Image ]================== //
-export const about_image = "https://avatars.githubusercontent.com/u/143298451?v=4"; // Replace with your own if desired
+export const about_image = "/images/about.jpg";
 
 // ==================[ Are you Freelancer? ]================== //
 export const is_freelancer = true;

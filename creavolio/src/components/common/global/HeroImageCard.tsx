@@ -17,7 +17,7 @@ const HeroImageCard = () => {
       <div className="p-4 relative rounded-full group">
         <Image
           src={about_image}
-          alt={"me"}
+          alt={personal_data.name}
           width={1000}
           height={1000}
           className="object-cover lg:group-hover:scale-110 group-hover:scale-[1.025] duration mx-auto border border-[var(--border-secondary)] rounded-full"
