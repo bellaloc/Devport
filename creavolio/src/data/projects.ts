@@ -23,7 +23,7 @@ export const projects = [
     title: "Alucres - AI Stock Predictor",
     description:
       "An AI-driven stock analysis dashboard using TensorFlow, scikit-learn, and historical market data. Combines real-time charting with predictive analytics. Backend powered by Flask, deployed on Heroku.",
-    images: ["/images/projects/2-1.jpg", "/images/projects/2-2.jpg"],
+    images: ["/images/projects/2-1.jpg"],
     tags: ["fintech", "AI", "fullstack"],
     tools_used: ["Python", "Flask", "TensorFlow", "React", "Chart.js"],
     duration: "1.5 months",
@@ -35,7 +35,7 @@ export const projects = [
     title: "Real Estate Market AI",
     description:
       "A predictive analytics tool for real estate investors. It provides future price predictions based on market history using regression models. Includes maps, listings, and dynamic charts.",
-    images: ["/images/projects/3-1.jpg", "/images/projects/3-2.jpg"],
+    images: ["/images/projects/3-1.jpg"],
     tags: ["real estate", "data", "AI"],
     tools_used: ["Next.js", "Leaflet.js", "Python", "Pandas", "scikit-learn"],
     duration: "3 weeks",
@@ -47,7 +47,7 @@ export const projects = [
     title: "Ymmy Grocery Store (Frontend)",
     description:
       "A modern grocery market web app focused on UX/UI for local shopping and deliveries. Mock product data with filtering, responsive layout, and checkout flow.",
-    images: ["/images/projects/4-1.jpg", "/images/projects/4-2.jpg"],
+    images: ["/images/projects/4-1.jpg"],
     tags: ["eCommerce", "frontend"],
     tools_used: ["Next.js", "Typescript", "Tailwind CSS", "Shadcn/ui"],
     duration: "1 month",
@@ -73,7 +73,7 @@ export const projects = [
       "An initiative supporting single mothers with remote work and entrepreneurship tools. Includes simple forms, storytelling layout, and CTA integrations.",
     images: ["/images/projects/6-1.jpg"],
     tags: ["nonprofit", "landing page", "UX"],
-    tools_used: ["React", "Tailwind CSS", "Framer Motion"],
+    tools_used: ["PHP"],
     duration: "5 days",
     link: "https://losangelust.vercel.app/",
   },
@@ -87,7 +87,7 @@ export const projects = [
     tags: ["branding", "logo", "design"],
     tools_used: ["Figma", "Illustrator"],
     duration: "1 day",
-    link: "#",
+    link: "",
   },
 
   // 8

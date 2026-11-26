@@ -67,9 +67,9 @@ const Contact = () => {
 
   const submitHandler = (values: z.infer<typeof sendEmailSchema>) => {
     setFormResponse(null);
-    startTransition(() => {
+    startTransition(async () => {
       const { email, message, subject } = values;
-      sendEmail(
+      await sendEmail(
         email,
         message,
         isGetService
@@ -78,8 +78,9 @@ const Contact = () => {
       )
         .then((res) => {
           setFormResponse(res);
+          if (!res.error) form.reset();
         })
-        .catch((message) => setFormResponse({ error: true, message: message }));
+        .catch(() => setFormResponse({ error: true, message: "Unable to send. Please email me directly." }));
     });
   };
 
@@ -116,7 +117,8 @@ const Contact = () => {
                             <Input
                               {...field}
                               placeholder="Your Email"
-                              type="text"
+                              aria-label="Your email"
+                              type="email"
                               disabled={isPending}
                               autoComplete="on"
                             />
@@ -142,6 +144,7 @@ const Contact = () => {
                             <Input
                               {...field}
                               placeholder="Your Subject"
+                              aria-label="Your subject"
                               type="text"
                               disabled={isPending || isGetService}
                               autoComplete="on"
@@ -167,6 +170,7 @@ const Contact = () => {
                             <Textarea
                               {...field}
                               placeholder="Your Message"
+                              aria-label="Your message"
                               disabled={isPending}
                               autoComplete="on"
                             />

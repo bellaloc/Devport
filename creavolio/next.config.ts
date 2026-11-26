@@ -1,10 +1,5 @@
-import netlify from "@netlify/next";
-
-const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  ...netlify,
+import type { NextConfig } from "next";
+const nextConfig: NextConfig = {
+  images: { remotePatterns: [{ protocol: "https", hostname: "avatars.githubusercontent.com", pathname: "/u/143298451" }] },
 };
-
 export default nextConfig;
