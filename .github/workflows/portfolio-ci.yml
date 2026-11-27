@@ -22,6 +22,9 @@ jobs:
       - run: npm ci
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
+      - name: Record dependency audit remediation plan
+        if: failure()
+        run: npm audit fix --dry-run --ignore-scripts --omit=dev --json
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run build
