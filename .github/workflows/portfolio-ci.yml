@@ -21,9 +21,12 @@ jobs:
           cache-dependency-path: creavolio/package-lock.json
       - run: npm ci
       - name: Audit production dependencies
+        id: audit
+        continue-on-error: true
         run: npm audit --omit=dev --audit-level=high
       - name: Record dependency audit remediation plan
-        if: failure()
+        if: steps.audit.outcome == 'failure'
+        continue-on-error: true
         run: npm audit fix --dry-run --ignore-scripts --omit=dev --json
       - run: npm run typecheck
       - run: npm run lint
@@ -42,3 +45,6 @@ jobs:
             sleep 1
           done
           NODE_PATH="$RUNNER_TEMP/portfolio-browser/node_modules" PORTFOLIO_URL=http://127.0.0.1:3000 node tests/responsive.cjs
+      - name: Enforce production security gate
+        if: always() && steps.audit.outcome != 'success'
+        run: exit 1
