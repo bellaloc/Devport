@@ -1,16 +1,7 @@
 "use client";
 import Link from "next/link";
-import Button from "../global/Button";
 import { ArrowRight } from "lucide-react";
-
-const ProjectLink = ({ link }: { link: string }) => {
-  return (
-    <Link href={link} target="_blank">
-      <Button variant="primary" className="p-4 h-fit group">
-        <ArrowRight className="inline ml-1 duration group-hover:-rotate-45 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-      </Button>
-    </Link>
-  );
-};
-
-export default ProjectLink;
+export default function ProjectLink({ link }: { link: string }) {
+  if (!link || link === "#") return null;
+  return <Link href={link} target="_blank" rel="noopener noreferrer" aria-label="Open project in a new tab" className="rad background-gradient text-white p-4 inline-flex items-center justify-center hover:opacity-80 focus-visible:outline focus-visible:outline-2"><ArrowRight aria-hidden="true" /></Link>;
+}

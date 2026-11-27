@@ -15,8 +15,8 @@ const SectionTitle = ({
   return (
     <h1
       className={cn(
-        "animated-duration relative md:text-8xl sm:text-6xl text-5xl",
-        "mb-24 select-none ease-out font-black text-center w-fit mx-auto",
+        "animated-duration relative md:text-8xl sm:text-6xl text-[clamp(2rem,9vw,3rem)]",
+        "mb-10 md:mb-24 select-none ease-out font-black text-center w-fit mx-auto",
         animate
           ? "opacity-100 translate-y-0 scale-y-100"
           : "opacity-50 translate-y-24 scale-y-50"

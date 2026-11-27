@@ -7,7 +7,7 @@ import { COLORS, ColorType } from "@/shared/colors";
 import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
-import Button from "./Button";
+
 
 const SocialLink = ({
   link,
@@ -27,7 +27,6 @@ const SocialLink = ({
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <Button>
       <div
         ref={socialLinkRef}
         style={{ transitionDuration: `${(idx + 1) * 300}ms` }}
@@ -38,8 +37,10 @@ const SocialLink = ({
         <Link
           href={link}
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${Icon.iconName} profile (new tab)`}
           className={cn(
-            "group size-12 rounded-full border flex-center text-[var(--text-primary)] duration-300",
+            "group size-11 sm:size-12 rounded-full border flex-center text-[var(--text-primary)] duration-300",
             color === "black" ? "dark:!text-white" : "",
             color === "black" && isHover ? "dark:!border-white" : ""
           )}
@@ -57,13 +58,12 @@ const SocialLink = ({
           />
         </Link>
       </div>
-    </Button>
   );
 };
 
 const SocialLinks = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("flex flex-wrap gap-8", className)}>
+    <div className={cn("flex flex-wrap gap-1 sm:gap-3 md:gap-8", className)}>
       {social_links.map((item, i) => (
         <SocialLink key={i} idx={i} {...item} />
       ))}

@@ -10,24 +10,24 @@ const PageProgress = ({
   scrollPercent: number;
 }) => {
   return (
-    <div
+    <button type="button" disabled={!isShow}
       className={cn(
-        "fixed bottom-0 right-4 z-30 cursor-pointer group rounded-full duration-300",
-        isShow ? "sm:-translate-y-4 -translate-y-20" : "translate-y-full"
+        "fixed bottom-[env(safe-area-inset-bottom,0px)] right-2 sm:right-4 z-30 cursor-pointer group rounded-full duration-300",
+        isShow ? "md:-translate-y-4 -translate-y-24" : "translate-y-full"
       )}
       onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
       aria-label="back to home section"
     >
       <Magnetic>
         <div
-          className="rounded-full flex justify-center items-center transition-colors size-16"
+          className="rounded-full flex justify-center items-center transition-colors size-12 sm:size-16"
           style={{
             background: `conic-gradient(var(--main) ${scrollPercent}%, var(--border) 0)`,
           }}
         >
           <div
             className={cn(
-              "absolute rounded-full bg-[var(--bg-secondary)] size-14"
+              "absolute rounded-full bg-[var(--bg-secondary)] size-10 sm:size-14"
             )}
           />
           <div className=" rounded-full flex justify-center items-center duration-300 cursor-pointer group">
@@ -42,7 +42,7 @@ const PageProgress = ({
           </div>
         </div>
       </Magnetic>
-    </div>
+    </button>
   );
 };
 

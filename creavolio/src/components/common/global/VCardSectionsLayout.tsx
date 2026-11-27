@@ -11,8 +11,8 @@ const VCardSectionsLayout = ({ children }: { children: ReactNode }) => {
       <div className="lg:grid lg:grid-cols-12 gap-0">
         <HeroImageCard />
 
-        <div className="lg:grid lg:col-span-9 lg:mt-0 ">
-          <MaxWidthWrapper className="mt-32">{children}</MaxWidthWrapper>
+        <div className="lg:grid lg:col-span-9 lg:mt-0 min-w-0 ">
+          <MaxWidthWrapper className="mt-12 md:mt-20 lg:mt-32">{children}</MaxWidthWrapper>
         </div>
       </div>
     </main>

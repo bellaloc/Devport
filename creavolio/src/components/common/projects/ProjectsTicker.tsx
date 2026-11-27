@@ -14,7 +14,7 @@ const Project = ({
   link: string;
 }) => {
   return (
-    <Link href={link} target="_blank">
+    <Link href={link || "#portfolio"} target={link ? "_blank" : undefined} rel={link ? "noopener noreferrer" : undefined}>
       <div className="relative aspect-square group border border-[var(--border-secondary)] rad overflow-hidden">
         <Image
           src={image}

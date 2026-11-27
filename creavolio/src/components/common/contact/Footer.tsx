@@ -7,7 +7,7 @@ const Footer = () => {
       <hr className="border-[var(--border)]" />
       <footer className="mt-8 text-center flex flex-col items-center gap-2">
         <p>
-          © 2025{" "}
+          © {new Date().getFullYear()}{" "}
           <span
             className="text-[var(--main)] font-semibold uppercase hover:underline"
             onClick={() =>
@@ -16,7 +16,7 @@ const Footer = () => {
           >
             {personal_data.name}
           </span>{" "}
-          All Rights Reserved.
+          Personal content. Third-party components retain their respective licenses.
         </p>
 
         <SocialLinks className="w-fit justify-center" />

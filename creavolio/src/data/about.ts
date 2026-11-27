@@ -8,7 +8,7 @@ export const about_hero_sentences = [
 ];
 
 // ==================[ About Image ]================== //
-export const about_image = "/images/about.jpg"; // Replace with your own if desired
+export const about_image = "/images/about.jpg";
 
 // ==================[ Are you Freelancer? ]================== //
 export const is_freelancer = true;
@@ -18,7 +18,7 @@ export const is_available = true;
 
 // ==================[ Cv File ]================== //
 export const cv = {
-  source: "/cv.pdf", // Place your real CV in the `public` folder and update filename if needed
+  source: "", // Place your real CV in the `public` folder and update filename if needed
   file_type: "pdf",
 };
 
@@ -110,26 +110,7 @@ export const languages = [
 ] as const;
 
 // ==================[ What's Client says ]================== //
-export const clients = [
-  {
-    name: "Jane Smith",
-    rate: 5,
-    comment:
-      "Outstanding communication and fast delivery. Truly impressed by the quality of work.",
-  },
-  {
-    name: "David Lee",
-    rate: 4.8,
-    comment:
-      "Took initiative and delivered a fully responsive, modern application ahead of deadline. Highly recommend!",
-  },
-  {
-    name: "Emily Tran",
-    rate: 5,
-    comment:
-      "You nailed the design-to-code handoff and exceeded expectations with performance optimizations. Can’t wait to collaborate again!",
-  },
-] as const;
+export const clients: readonly { name: string; rate: number; comment: string }[] = [];
 
 // ==================[ Goals ]================== //
 export const goals = [

@@ -13,14 +13,15 @@ const { rotation } = styles;
 
 const HeroImageCard = () => {
   return (
-    <div className="animated-duration lg:col-span-3 lg:h-[100vh] h-fit p-8 bg-[var(--bg-primary)] lg:sticky relative lg:top-0 transition-shadow border-b border-r border-[var(--border)]">
-      <div className="p-4 relative rounded-full group">
+    <div className="animated-duration lg:col-span-3 lg:max-h-[100dvh] lg:overflow-y-auto h-fit p-4 sm:p-8 bg-[var(--bg-primary)] lg:sticky relative lg:top-0 transition-shadow border-b border-r border-[var(--border)]">
+      <div className="p-3 sm:p-4 relative rounded-full group mx-auto w-full max-w-[18rem] sm:max-w-[22rem] lg:max-w-full aspect-square">
         <Image
           src={about_image}
-          alt={"me"}
+          alt={personal_data.name}
           width={1000}
           height={1000}
-          className="object-cover lg:group-hover:scale-110 group-hover:scale-[1.025] duration mx-auto border border-[var(--border-secondary)] rounded-full"
+          sizes="(max-width: 639px) 288px, (max-width: 1023px) 352px, 25vw"
+          className="w-full h-full aspect-square object-cover lg:group-hover:scale-105 duration mx-auto border border-[var(--border-secondary)] rounded-full"
         />
         <div
           className={cn(
@@ -32,8 +33,8 @@ const HeroImageCard = () => {
 
       <div className="mt-4 space-y-8 rounded-b-lg">
         <div className="flex flex-col gap-2 items-center">
-          <div className="flex justify-center">
-            <h1 className="text-3xl text-center text-gradient font-[800]">
+          <div className="flex justify-center items-center gap-1 flex-wrap">
+            <h1 className="text-2xl sm:text-3xl text-center text-gradient font-[800]">
               {personal_data.name}
             </h1>
             <span className="text-3xl">👋🏼</span>
@@ -50,7 +51,7 @@ const HeroImageCard = () => {
           <HireAvailability isAvailable={is_available} />
         </div>
 
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap gap-3 sm:gap-8">
           {is_available ? (
             <Link href="#contact" className="flex-1">
               <HeroButton text="Hire me" variant="primary" />

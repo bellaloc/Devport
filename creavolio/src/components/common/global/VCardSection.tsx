@@ -48,10 +48,10 @@ const VCardSectionTitle = ({ title }: { title: string }) => {
   }, [animate]);
 
   return (
-    <div className="mb-16 flex gap-8 items-center lg:justify-start justify-center">
+    <div className="mb-8 md:mb-16 flex gap-4 md:gap-8 items-center lg:justify-start justify-center">
       <h1
         className={cn(
-          "animated font-extrabold md:text-8xl sm:text-7xl text-5xl tracking-wide",
+          "animated font-extrabold md:text-8xl sm:text-7xl text-[clamp(2rem,9vw,3rem)] tracking-wide text-center break-words min-w-0",
           "relative bg-clip-text bg-no-repeat inline"
         )}
         ref={titleRef}

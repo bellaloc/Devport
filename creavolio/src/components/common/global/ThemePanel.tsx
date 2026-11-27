@@ -31,12 +31,14 @@ const ThemePanel = () => {
 
   return (
     <div
-      className="fixed right-0 top-20 w-40 p-4 h-auto background-blurry z-40 translate-x-full data-[open=true]:translate-x-0 duration"
+      className="fixed right-0 top-[max(1rem,env(safe-area-inset-top,0px))] md:top-20 w-40 p-3 md:p-4 h-auto background-blurry z-40 translate-x-full data-[open=true]:translate-x-0 duration"
       data-open={isOpen}
     >
       <Button
         className="background-blurry p-4 text-[var(--text-primary)] rounded-r-none! absolute left-0 top-0 -translate-x-full"
         magneticIntensity={0}
+        aria-label="Theme settings"
+        aria-expanded={isOpen}
         onClick={() => setIsOpen(!isOpen)}
       >
         <Settings
@@ -45,6 +47,7 @@ const ThemePanel = () => {
         />
       </Button>
 
+      <div inert={!isOpen} className="max-h-[calc(100dvh-6rem)] overflow-y-auto">
       <Separator text="main color" />
 
       <div className="flex flex-wrap gap-4 mb-4">
@@ -53,8 +56,9 @@ const ThemePanel = () => {
             <Button
               key={i}
               name={c}
+              aria-label={`Select ${c} color`}
               className={cn(
-                "size-8 hover:scale-95 duration-150 text-white text-sm flex justify-center items-center rounded-full",
+                "size-10 hover:scale-95 duration-150 text-white text-sm flex justify-center items-center rounded-full",
                 activeColor === i ? "pointer-events-none" : "cursor-pointer"
               )}
               style={{ backgroundColor: COLORS[c] }}
@@ -81,7 +85,7 @@ const ThemePanel = () => {
 
       <Button
         className="text-primary border border-[var(--text-primary)] !rounded-full size-16 mx-auto mb-4"
-        name={`change to ${isDark ? "light" : "dark"}`}
+        aria-label={`change to ${isDark ? "light" : "dark"}`}
         onClick={toggleHander}
       >
         {isDark ? <Sun /> : <Moon />}
@@ -114,6 +118,7 @@ const ThemePanel = () => {
             </Button>
           ) : null
         )}
+      </div>
       </div>
     </div>
   );

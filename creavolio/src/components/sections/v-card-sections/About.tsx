@@ -2,10 +2,10 @@
 import AboutCard from "../../common/about/AboutCard";
 import { languages, skills, tools } from "@/data/about";
 import Tool from "../../common/about/Tool";
-import LinearProgress1 from "../../common/about/LinearProgress1";
+
 import CircularProgress from "../../common/about/CircularProgress";
 import ArrowLink from "../../common/global/ArrowLink";
-import HappyClientsTicker from "../../common/about/HappyClientsTicker";
+
 import Goals from "../../common/about/Goals";
 import VCardSection from "@/components/common/global/VCardSection";
 import ProjectsTicker from "@/components/common/projects/ProjectsTicker";
@@ -26,11 +26,7 @@ const About = () => {
         <AboutCard title="Skills" className="2xl:col-span-7 xl:col-span-6">
           <div className="flex flex-col gap-8">
             {skills.map((item, i) => (
-              <LinearProgress1
-                key={i}
-                value={item.percent}
-                title={item.skill}
-              />
+              <p key={i} className="text-lg">{item.skill}</p>
             ))}
           </div>
         </AboutCard>
@@ -59,9 +55,6 @@ const About = () => {
           </AboutCard>
         </div>
 
-        <AboutCard title="Clients Says">
-          <HappyClientsTicker />
-        </AboutCard>
 
         <AboutCard title="my Goals">
           <Goals />

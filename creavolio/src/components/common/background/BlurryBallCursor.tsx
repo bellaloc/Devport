@@ -19,7 +19,7 @@ const BlurryBallCursor = () => {
 
   return (
     <motion.div
-      className="absolute left-0 top-0 size-48 bg-[var(--main)] z-0 rounded-full pointer-events-none opacity-10 blur-[8rem]"
+      className="pointer-decoration absolute left-0 top-0 size-48 bg-[var(--main)] z-0 rounded-full pointer-events-none opacity-10 blur-[8rem]"
       style={{
         translateX: smoothX,
         translateY: smoothY,

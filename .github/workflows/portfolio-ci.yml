@@ -1,0 +1,50 @@
+name: Portfolio CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: creavolio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: creavolio/package-lock.json
+      - run: npm ci
+      - name: Audit production dependencies
+        id: audit
+        continue-on-error: true
+        run: npm audit --omit=dev --audit-level=high
+      - name: Record dependency audit remediation plan
+        if: steps.audit.outcome == 'failure'
+        continue-on-error: true
+        run: npm audit fix --dry-run --ignore-scripts --omit=dev --json
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - name: Install isolated browser test tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/portfolio-browser" --no-audit --no-fund playwright@1.51.1
+          "$RUNNER_TEMP/portfolio-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Test responsive layout and local portraits
+        run: |
+          npm run start -- --hostname 127.0.0.1 > /tmp/portfolio-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000 > /dev/null; then break; fi
+            sleep 1
+          done
+          NODE_PATH="$RUNNER_TEMP/portfolio-browser/node_modules" PORTFOLIO_URL=http://127.0.0.1:3000 node tests/responsive.cjs
+      - name: Enforce production security gate
+        if: always() && steps.audit.outcome != 'success'
+        run: exit 1
